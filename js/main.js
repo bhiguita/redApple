@@ -1,13 +1,15 @@
-
 $(document).ready(function() {
 
-    $("a.transition").click(function(event){
-        event.preventDefault();
-        linkLocation = this.href;
-        $("body").fadeOut(1000, redirectPage);
-    });
+    var trigger = $('#transition');
+    var content = $('#mainPage');
 
-    function redirectPage() {
-        window.location = linkLocation;
-    }
+    trigger.on('click', function() {
+      // var $this = $(this);
+      //   target = $this.data('target');
+
+    content.load('content.php');
+    return false;
+
+    })
+
 });

@@ -1,4 +1,3 @@
-
 body {
 
     background: url(../assets/background1.jpg) no-repeat center center scroll;
@@ -7,15 +6,41 @@ body {
     -o-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
-
     color: white;
+    position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+.header-spacing {
+  margin-top: 10px;
+  margin-bottom: 25px;
 }
 
 .hr {
-  border-bottom:solid 2px white;
+  border-bottom:solid 4px white;
   width: 90%;
-  margin-left: 5%;
+  margin-left: 1%;
 }
+
+.item {
+  height: 100%;
+}
+
+.hover-card { position: relative; background-color: #f35454; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); height: 100%; width: 100%; }
+.hover-card-text h3 { color: #fff; text-align: center; line-height: 100px; }
+a .hover-card:before {  background: none repeat scroll 0 0 rgba(44, 62, 80, 0.68);  color: #FFFFFF;  content: "Gran Canaria Playlist \A \f138";  font-family: 'Roboto','FontAwesome';  font-size: 1.3rem;  height: 100%;  width: 100%;  opacity: 0;  position: absolute;  text-decoration: none;  z-index: 10;  -webkit-transition: all 300ms linear;  -moz-transition: all 300ms linear;  -ms-transition: all 300ms linear;  -o-transition: all 300ms linear;  transition: all 300ms linear;  display: flex;  flex-flow: row wrap;  display: flex;  align-items: center;  justify-content: center;  text-align: center;  padding-bottom: 0%;  border-radius: 2px; }
+a .hover-card:hover::before {opacity: 1;}
+a .hover-card:focus::before {opacity: 1;}
+a .hover-card:hover > .hover-card-text h3 { opacity: 0; transition: all 300ms linear; -webkit-transition: all 300ms linear; -moz-transition: all 300ms linear; -ms-transition: all 300ms linear; -o-transition: all 300ms linear; }
+a .hover-card:focus > .hover-card-text h3 { opacity: 0; transition: all 300ms linear; -webkit-transition: all 300ms linear; -moz-transition: all 300ms linear; -ms-transition: all 300ms linear; -o-transition: all 300ms linear; }
+
 
 
 .destination-buttons {
@@ -24,35 +49,33 @@ body {
   padding:0px;
 }
 .destination-container {
-  background-color: #da3030;
-  margin:10px;
-  margin-top: 0px;
+  background-color: #ee3838;
   padding: 10px;
+  min-height: 100%;
+  min-width: 100%;
 }
 
-
-.destination-buttons h2 {
-  font-size: 16px;
+.destination-container h2 {
+  font-size: 2.6vmin;
   font-weight: 600;
+  padding-top: 10px;
+  margin-bottom: 10px;
+
 }
-.destination-buttons p {
-  font-size: 12px;
+.destination-container p {
+  font-size: 2vmin;
   font-weight: 300;
+  margin-top: 10px;
 
 }
 
 .terms {
   color: white;
-
-}
-
-.terms a {
-  color: white;
   padding-left: 10px;
   text-decoration: underline;
-  font-size: 9px;
-
+  font-size: 1rem;
 }
+
 
 .header-logo {
   background-color: #da3030;
@@ -66,6 +89,7 @@ body {
 
 .main-section {
   margin-top: 15%;
+  position: relative;
 }
 
 .choose-destination {
@@ -83,7 +107,149 @@ body {
 }
 
 
-/* OTHER PAGE */
+.selected-holiday {
+  background-color: #f51616
+}
+
+.footer-bg {
+  background-color: #ee3838;
+  padding-top: 10px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.spotify {
+  width: 100px;
+}
+
+#go_red {
+  color: white;
+  width: 5vmin;
+  padding-top: 7%;
+  padding-bottom: 18%;
+  font-weight: 700;
+
+}
+
+#selected-button {
+  text-align: center;
+  background: white;
+  border: solid 4px red;
+  color: red;
+
+}
+
+body {
+  background-color: white;
+}
+
+.section {
+  display: flex;
+
+    justify-content: flex-start;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    height: 40vh;
+    width: 100%;
+}
+
+
+
+.content-area {
+
+  flex: 0 32%;
+  margin-bottom: 1%;
+/*   margin-bottom: 5px; */
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 700px) {
+  .content-area {
+
+    flex: 0 47%;
+  }
+}
+
+
+
+@media screen and (min-width: 1000px) {
+  .destination-container h2 {
+    font-size: 2vmin;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+
+  .main-section {
+    margin-top: 10%;
+  }
+}
+
+/*  MEDIA QUERY FOR MOBILE / TABLET */
+
+@media only screen and (max-width: 770px) {
+  .destination-container h2 {
+    font-size: 20px;
+
+  }
+
+  .destination-container {
+    padding-bottom: 1px;
+  }
+
+  .destination-container p {
+    font-size: 17px;
+  }
+
+  .terms {
+    padding-top: 10px;
+    padding-left: 0px;
+
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+
+  }
+
+  .main-section {
+    margin-top: 5%;
+  }
+  .destination-container {
+    margin-top: 3px;
+  }
+  img {
+    width: 50%;
+  }
+  .footer-images {
+    width: 15%;
+    margin-left: 5px;
+  }
+  .spotify {
+    width: 80px;
+  }
+
+  .footer-center {
+    text-align: center;
+  }
+
+  .footer-text{
+    font-size: 2.5vmin;
+  }
+  .terms {
+    margin-bottom: 115px;
+  }
+}
+
 
 #otherPage {
 
@@ -95,4 +261,117 @@ body {
     background-attachment: fixed;
 
     color: white;
+}
+
+
+
+/* PAGE TWO  */
+
+
+.content-text {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: 20vh;
+}
+
+.flex-container > div {
+  /* background-color: grey; */
+  /* border: solid 1px red; */
+  color: white;
+  width: 100px;
+  margin-right: 20px;
+  text-align: center;
+  /* line-height: 75px; */
+  font-size: 30px;
+}
+
+.content-playlist {
+  border: solid 6px red;
+  background-color: white;
+  height: 100%;
+}
+
+.content-playlist h2 {
+  color: red;
+  padding: 20px;
+
+  font-size: 2.6vmin;
+  font-weight: 600;
+  text-align: center;
+}
+
+.content-playlist img {
+  width: 4vmin;
+  vertical-align: top;
+}
+
+.playlist-img {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+}
+
+.playlist-img div {
+  flex: 47%;
+}
+
+.thumbnails {
+  width: 100%;
+  height: 100%;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  text-align: center;
+}
+
+.social-media div p {
+  padding-top: 10px;
+}
+
+#social1 {
+background-color: red;
+}
+#social2 {
+background-color: #3B5998;
+}
+#social3 {
+background-color: #00aced;
+}
+
+.secondpage-content p {
+  margin-bottom: 15%;
+}
+
+
+/* FOOTER */
+
+.footer-flex-container {
+  display: flex;
+  align-items: stretch;
+  background-color: #da3030;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+}
+
+.footer-flex-container div p {
+  font-size: 2vmin
+}
+
+.footer-flex-container div {
+  color: white;
+  margin: 10px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+
 }
